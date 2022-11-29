@@ -1,0 +1,144 @@
+/* RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* GLOBALS */
+:root {
+  font-size: 62.5%;
+
+  --clr-accent: #d80032;
+  --clr-accent-medium: #bd0404;
+  --clr-accent-dark: #7d0404;
+  --clr-secondary: #2b2d42;
+  --clr-secondary-light: #8d99ae;
+  --clr-primary: #edf2f4;
+  --clr-grey: #cbcdcd;
+
+  --ff-accent: "Pacifico", cursive;
+  --ff-base: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: var(--clr-primary);
+  color: var(--clr-secondary);
+  font-family: var(--ff-base);
+  font-size: 1.6rem;
+  font-weight: 700;
+  display: grid;
+  place-content: center;
+}
+
+button {
+  background-color: transparent;
+  border: 2px solid var(--clr-secondary);
+  border-radius: 0.8rem;
+  color: inherit;
+  cursor: pointer;
+  font-size: inherit;
+  padding: 1rem 2rem;
+
+  box-shadow: 5px 5px 5px var(--clr-secondary);
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover,
+button:active {
+  border-color: transparent;
+  background-color: var(--clr-secondary);
+  color: var(--clr-primary);
+  box-shadow: 0 0 0 0;
+  transform: scale(1.1);
+}
+
+/* UTILITY CLASES */
+.flex {
+  display: flex;
+}
+
+/* ETCH A SKETCH*/
+.header {
+  padding: 3rem 0;
+}
+
+.header__title {
+  font-family: var(--ff-accent);
+  font-size: 5.2rem;
+  letter-spacing: 1rem;
+  text-align: center;
+}
+
+.main {
+  max-width: 1100px;
+  width: 100%;
+  gap: 5rem;
+}
+
+.options-container {
+  width: 20rem;
+
+  align-self: center;
+  flex-direction: column;
+  row-gap: 3rem;
+}
+
+.grid-size p {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.grid-size p span {
+  font-size: 1.8rem;
+}
+
+input[type="range"] {
+  appearance: none;
+  background: var(--clr-secondary);
+  border-radius: 0.8rem;
+  height: 1rem;
+  width: 100%;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  background: var(--clr-secondary-light);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+  margin-top: -4px;
+
+  box-shadow: 5px 5px 10px var(--clr-secondary);
+}
+
+.sketchpad-container {
+  background: linear-gradient(var(--clr-accent) 0%, #bd0404 50%, #7d0404 100%);
+  border-radius: 2rem;
+  height: 50rem;
+  width: 70rem;
+  box-shadow: 20px 20px 16px var(--clr-secondary);
+
+  justify-content: center;
+  align-items: center;
+}
+
+.sketchpad {
+  background-color: #cbcdcd;
+  border-radius: 0.5rem;
+  height: 40rem;
+  width: 60rem;
+
+  box-shadow: inset 0px 0px 8px 2px var(--clr-secondary);
+}
+
+.sketchpad div {
+  border: 1px solid var(--clr-secondary);
+}
+
+.sketchpad div.no-lines {
+  border-color: transparent;
+}
