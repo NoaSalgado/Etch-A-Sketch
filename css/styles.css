@@ -21,6 +21,9 @@
 
   --ff-accent: "Pacifico", cursive;
   --ff-base: "Montserrat", sans-serif;
+
+  --grid-cols: 1;
+  --grid-rows: 1;
 }
 
 body {
@@ -29,7 +32,7 @@ body {
   font-family: var(--ff-base);
   font-size: 1.6rem;
   font-weight: 700;
-  display: grid;
+
   place-content: center;
 }
 
@@ -58,6 +61,10 @@ button:active {
 /* UTILITY CLASES */
 .flex {
   display: flex;
+}
+
+.grid {
+  display: grid;
 }
 
 /* ETCH A SKETCH*/
@@ -133,12 +140,16 @@ input[type="range"]::-webkit-slider-thumb {
   width: 60rem;
 
   box-shadow: inset 0px 0px 8px 2px var(--clr-secondary);
+
+  display: grid;
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
+  grid-template-columns: repeat(var(--grid-rows), 1fr);
 }
 
 .sketchpad div {
-  border: 1px solid var(--clr-secondary);
+  border: 0.5px solid transparent;
 }
 
 .sketchpad div.no-lines {
-  border-color: transparent;
+  border-color: rgba(0, 0, 0, 0.1);
 }
