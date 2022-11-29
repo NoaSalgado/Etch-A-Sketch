@@ -148,8 +148,42 @@ input[type="range"]::-webkit-slider-thumb {
 
 .sketchpad div {
   border: 0.5px solid transparent;
+  transition: all 0.3s ease;
 }
 
 .sketchpad div.no-lines {
   border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1024px) {
+  .main {
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sketchpad-container {
+    height: 30rem;
+    width: 50rem;
+  }
+
+  .sketchpad {
+    height: 25rem;
+    width: 45rem;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .sketchpad-container {
+    height: 30rem;
+    width: 35rem;
+
+    align-self: center;
+  }
+
+  .sketchpad {
+    height: 25rem;
+    width: 30rem;
+  }
 }

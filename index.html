@@ -14,18 +14,18 @@
     <script src="js/app.js" defer></script>
     <title>Etch-A-Sketch</title>
   </head>
-  <body>
+  <body class="grid">
     <header class="header">
       <h1 class="header__title">Etch A Sketch</h1>
     </header>
 
     <main class="main flex">
       <section class="options-container flex">
-        <button class="black-btn">Black Mode</button>
+        <button class="dark-btn">Dark Mode</button>
         <button class="random-btn">Random Mode</button>
         <button class="eraser-btn">Eraser</button>
         <div class="grid-size">
-          <p><span>16</span> X <span>16</span></p>
+          <p><span></span> X <span></span></p>
           <input type="range" min="16" max="64" value="16" />
         </div>
         <button class="grid-lines-btn">Grid Lines</button>
@@ -33,7 +33,7 @@
       </section>
 
       <section class="sketchpad-container flex">
-        <div class="sketchpad"></div>
+        <div class="sketchpad grid"></div>
       </section>
     </main>
   </body>
